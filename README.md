@@ -22,7 +22,7 @@ Built with **Flutter**, **Dart**, and **Material 3**, TableTime delivers an end-
 13. [Checkout & Confirmation](#checkout--confirmation)
 14. [Project Folder Structure](#project-folder-structure)
 15. [How to Run the Project](#how-to-run-the-project)
-16. [Deployment on Render](#deployment-on-render)
+16. [Deployment on Vercel](#deployment-on-vercel)
 17. [Testing & Verified Functionality](#testing--verified-functionality)
 18. [Limitations](#limitations)
 
@@ -320,17 +320,15 @@ The menu offers instant category filtering through dynamic `FilterChip` widgets:
 
 ```
 TableTime/
-├── .dockerignore                     # Docker build exclusion rules
 ├── .gitignore                        # Git ignore file (excludes secrets, .env, build caches)
-├── Dockerfile                        # Multi-stage container build for Render
 ├── README.md                         # Comprehensive documentation
 ├── analysis_options.yaml             # Dart static analysis lint rules
-├── nginx.conf                        # Production Nginx SPA routing & caching config
 ├── pubspec.yaml                      # Dependencies and asset declarations
-├── render.yaml                       # Render 1-click blueprint deployment specification
+├── vercel.json                       # Vercel SPA routing and build configuration
+├── documentation/                    # Project report and academic documentation
+├── screenshots/                      # 7 iPhone simulator flow screenshots
 ├── assets/
-│   ├── food/                         # 26 high-resolution dish image assets
-│   └── stitch_screens/               # Reference design assets
+│   └── food/                         # 26 high-resolution dish image assets
 ├── lib/
 │   ├── main.dart                     # App entry point, MultiProvider configuration
 │   ├── data/
@@ -416,22 +414,29 @@ TableTime/
 
 ---
 
-## Deployment on Render
+## Deployment on Vercel
 
-This repository includes a production-ready **Render Blueprint** (`render.yaml`), **multi-stage Dockerfile** (`Dockerfile`), and **Nginx configuration** (`nginx.conf`) for zero-configuration hosting on [Render](https://render.com).
+This repository is pre-configured for seamless frontend deployment on [Vercel](https://vercel.com) using [`vercel.json`](vercel.json), with Single Page Application (SPA) routing rewrites and automatic Flutter release build execution.
 
-### Option 1: 1-Click Render Blueprint (Recommended)
-1. Push this project to your GitHub repository.
-2. Log into your [Render Dashboard](https://dashboard.render.com).
-3. Click **New +** $\rightarrow$ **Blueprint**.
-4. Connect your GitHub repository. Render will automatically detect `render.yaml`, build the Docker container using Flutter stable, and serve the compiled web assets via Nginx on Render's free tier.
+### Option 1: Git Integration via Vercel Dashboard (Recommended)
+1. Push this repository to your GitHub account.
+2. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New...** $\rightarrow$ **Project**.
+3. Import your **TableTime** GitHub repository.
+4. Vercel automatically detects [`vercel.json`](vercel.json):
+   - **Framework Preset**: Other
+   - **Build Command**: Clones Flutter stable and runs `flutter build web --release`
+   - **Output Directory**: `build/web`
+5. Click **Deploy**. Your app will be live with a global CDN and automatic SSL certificate.
 
-### Option 2: Manual Docker Web Service
-1. On Render, click **New +** $\rightarrow$ **Web Service**.
-2. Select your GitHub repository.
-3. Set the Environment to **Docker**.
-4. Set the Health Check Path to `/`.
-5. Click **Create Web Service**.
+### Option 2: Deploy via Vercel CLI
+If you prefer building locally and deploying directly:
+```bash
+# 1. Build the production web bundle
+flutter build web --release
+
+# 2. Deploy to Vercel production
+npx vercel --prod
+```
 
 ---
 
