@@ -96,25 +96,39 @@ The application follows a linear, 7-stage guided dining flow:
 ## Screenshots
 
 ### Home
-![Home](screenshots/01_home.png)
+<p align="center">
+  <img src="screenshots/01_home.png" width="340" alt="Home Screen" />
+</p>
 
 ### Reservation Details
-![Reservation Details](screenshots/02_reservation_details.png)
+<p align="center">
+  <img src="screenshots/02_reservation_details.png" width="340" alt="Reservation Details Screen" />
+</p>
 
 ### Table Selector
-![Table Selector](screenshots/03_table_selector.png)
+<p align="center">
+  <img src="screenshots/03_table_selector.png" width="340" alt="Table Selector Screen" />
+</p>
 
 ### Menu
-![Menu](screenshots/04_menu.png)
+<p align="center">
+  <img src="screenshots/04_menu.png" width="340" alt="Menu Screen" />
+</p>
 
 ### Cart
-![Cart](screenshots/05_cart.png)
+<p align="center">
+  <img src="screenshots/05_cart.png" width="340" alt="Cart Screen" />
+</p>
 
 ### Checkout
-![Checkout](screenshots/06_checkout.png)
+<p align="center">
+  <img src="screenshots/06_checkout.png" width="340" alt="Checkout Screen" />
+</p>
 
 ### Confirmation
-![Confirmation](screenshots/07_confirmation.png)
+<p align="center">
+  <img src="screenshots/07_confirmation.png" width="340" alt="Confirmation Screen" />
+</p>
 
 ---
 
