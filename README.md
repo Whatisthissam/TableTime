@@ -96,25 +96,25 @@ The application follows a linear, 7-stage guided dining flow:
 ## Screenshots
 
 ### Home
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Home](screenshots/01_home.png)
 
 ### Reservation Details
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Reservation Details](screenshots/02_reservation_details.png)
 
 ### Table Selector
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Table Selector](screenshots/03_table_selector.png)
 
 ### Menu
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Menu](screenshots/04_menu.png)
 
 ### Cart
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Cart](screenshots/05_cart.png)
 
 ### Checkout
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Checkout](screenshots/06_checkout.png)
 
 ### Confirmation
-[INSERT IPHONE SIMULATOR SCREENSHOT HERE]
+![Confirmation](screenshots/07_confirmation.png)
 
 ---
 
