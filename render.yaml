@@ -1,0 +1,14 @@
+# Render Blueprint Specification for TableTime
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: tabletime-app
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: "80"
